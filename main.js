@@ -2,16 +2,26 @@
 // <=  inférieur ou égale à
 // !=  différent ou égale à
 
-let firstname = prompt('Quel est votre prénom ?')
-let length = firstname.length
-//for (let i = 0; i <= length; i++) {
-        if (length > 10) { message = 'Votre prénom est trop long !' }
- else {
-        message = 'Bonjour ' + firstname
-}
-//}
-alert(message)
+// let variable = []; ces brackets sont utilisé afin de donner multiple valeurs; comme un tableau.
 
+let listNames = ['pierre', 'paul', 'jack', 'jean', 'de', 'la', 'fontaine'];
+let arrayReturn = [];
+let nb = listNames.length;
+
+for (let i = 0; i < nb; i++) {
+        if (listNames[i].length == 4) {
+                arrayReturn.push(listNames[i])
+        }
+}
+console.log(arrayReturn);
+
+
+
+//let just4_Letters = () => {
+//let listNames = ['pierre','paul','jack','jean','de','la','fontaine'];
+//let theWords = listNames.filter(words => words.length === 4)
+//document.write(theWords ); }
+//just4_Letters();
 
 
 // Initiation JS
@@ -34,6 +44,27 @@ alert(message)
 //for(let i=0; i < names.length; i++)
 // { alert('Bonjour ' + names[i])}
 
+// OR
+
+//let listName = ['Cédric','Paul','Jean','Najia'];
+//for(let i = 0; i < listName.length; i++){
+//        alert(listName[i]);
+//}
+
+
+
+// Calcule le nombre de lettres et affiche un message diff si >10
+
+//let firstname = prompt('Quel est votre prénom ?')
+//let length = firstname.length
+//let message= ""
+//for (let i = 0; i <= length; i++) {
+//        if (length > 10) { message = 'Votre prénom est trop long !' }
+// else {
+//        message = 'Bonjour ' + firstname
+//}
+//}
+//alert(message)
 
 
 
@@ -85,7 +116,11 @@ alert(message)
 //}
 
 
+// Compter jusqu'à 10 !!
 
+//for (let i = 1; i <= 10; i++) {
+//    alert(i);
+//}
 
 
 // Pension sur le nombre d'enfants
@@ -121,3 +156,24 @@ alert(message)
 //      }
 //}
 //alert(firstname)
+
+
+
+
+
+
+// Donner son prénom; il est retourné sous forme d'1 lettres par 1 jusqu'à la fin
+
+//let firstname = prompt('Votre prénom : ')
+//for(let i = 0; i < firstname.length; i++) {
+//       alert(firstname.charAt(i));
+//}
+
+// OR
+
+//let firstname = prompt('Votre prénom : ');
+//let charArray = firstname.split('');
+//let nbChar = charArray.length;
+//for (let i = 0; i < nbChar ; i++ ) {
+//        alert(charArray[i])
+//}
