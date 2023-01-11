@@ -4,25 +4,45 @@
 
 // let variable = []; ces brackets sont utilisé afin de donner multiple valeurs; comme un tableau.
 
-let listNames = ['pierre', 'paul', 'jack', 'jean', 'de', 'la', 'fontaine'];
-let arrayReturn = [];
-let nb = listNames.length;
 
-for (let i = 0; i < nb; i++) {
-        if (listNames[i].length == 4) {
-                arrayReturn.push(listNames[i])
-        }
+// Compter le nb de voyelle & consonnes d'un mot
+
+//const word = prompt('Ecris un mot')
+//let arrayVowels = ['a','e','i','o','u','y'];
+//let nbVoyel = 0;
+//let nbCons = 0;
+
+//for(let i = 0; i < word.length; i++){
+//        if(arrayVowels.includes(word[i])){
+//                nbVoyel++;
+//        }else{
+//                nbCons++;
+//        }
+//}
+//alert(nbVoyel + ' Voyelles ' + nbCons + ' Consonnes ');
+
+
+// OR
+let button = document.getElementById('start');
+
+button.addEventListener('click', function () {
+        alert(countVoyCons(prompt('Tape ton nom !')));
+});
+
+function countVoyCons(word) {
+        let arrayVowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+        let nbVoyel = 0;
+        let nbCons = 0;
+
+        [...word].forEach(letter => {
+                if (arrayVowels.includes(letter)) {
+                        nbVoyel++;
+                } else {
+                        nbCons++;
+                }
+        });
+        return nbVoyel + ' Voyelles ' + nbCons + ' Consonnes ';
 }
-console.log(arrayReturn);
-
-
-
-//let just4_Letters = () => {
-//let listNames = ['pierre','paul','jack','jean','de','la','fontaine'];
-//let theWords = listNames.filter(words => words.length === 4)
-//document.write(theWords ); }
-//just4_Letters();
-
 
 // Initiation JS
 
@@ -67,7 +87,26 @@ console.log(arrayReturn);
 //alert(message)
 
 
+//Retourne seulement les noms de 4 lettres
 
+//let listNames = ['pierre', 'paul', 'jack', 'jean', 'de', 'la', 'fontaine'];
+//let arrayReturn = [];
+//let nb = listNames.length;
+
+//for (let i = 0; i < nb; i++) {
+//        if (listNames[i].length == 4) {
+//                arrayReturn.push(listNames[i])
+//        }
+//}
+//console.log(arrayReturn);
+
+//OR
+
+//let just4_Letters = () => {
+//let listNames = ['pierre','paul','jack','jean','de','la','fontaine'];
+//let theWords = listNames.filter(words => words.length === 4)
+//document.write(theWords ); }
+//just4_Letters();
 
 
 // CALCULS
